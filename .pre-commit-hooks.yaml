@@ -1,0 +1,5 @@
+- id: end-of-file-sql
+  name: hook to remove lines in sql
+  entry: hook-sql-remove-lines
+  types: [sql]
+  language: python

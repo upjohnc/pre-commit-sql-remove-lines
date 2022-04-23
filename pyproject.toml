@@ -2,7 +2,7 @@
 name = "disney_precommit_sql_file"
 version = "0.1.0"
 description = "Precommit hook to remove all extra lines at the end of a sql file."
-authors = ["chad.upjohn.-nd@disneystreaming.com"]
+authors = ["Chad Upjohn <chad.upjohn.-nd@disneystreaming.com>"]
 
 [tool.poetry.dependencies]
 python = "~3.10"
@@ -20,6 +20,9 @@ pytest-assume = "^2.4.3"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+hook-sql-remove-lines = 'disney_precommit_sql_file.precommit_sql_clean:main'
 
 [tool.isort]
 src_paths = ["src","tests"]
