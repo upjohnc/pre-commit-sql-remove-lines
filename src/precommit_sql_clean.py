@@ -1,14 +1,14 @@
 import re
 
 
-def remove_endlines(file_name):
-    with open(file_name) as f:
-        file_thing = f.read()
+def remove_endlines(file_content: str) -> str:
+    # with open(file_name) as f:
+    #     file_thing = f.read()
 
-    file_lines = file_thing.splitlines()
+    file_lines = file_content.splitlines()
 
     if len(file_lines) < 1:
-        return 0
+        return file_content
 
     while re.search(r"^\s*$", file_lines[-1]) is not None:
         if len(file_lines) == 1:
@@ -16,9 +16,7 @@ def remove_endlines(file_name):
             break
 
         file_lines = file_lines[:-1]
-
-    with open(file_name, "w") as f:
-        f.write("\n".join(file_lines))
+    return "\n".join(file_lines)
 
 
 if __name__ == "__main__":

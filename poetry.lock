@@ -208,7 +208,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 name = "pyfakefs"
 version = "4.5.6"
 description = "pyfakefs implements a fake file system that mocks the Python file system modules."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -257,7 +257,7 @@ python-versions = "*"
 
 [[package]]
 name = "pytest"
-version = "7.1.1"
+version = "7.1.2"
 description = "pytest: simple powerful testing with Python"
 category = "dev"
 optional = false
@@ -277,6 +277,18 @@ tomli = ">=1.0.0"
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
 
 [[package]]
+name = "pytest-assume"
+version = "2.4.3"
+description = "A pytest plugin that allows multiple failures per test"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+pytest = ">=2.7"
+six = "*"
+
+[[package]]
 name = "pytest-env"
 version = "0.6.2"
 description = "py.test plugin that allows you to add environment variables."
@@ -286,6 +298,14 @@ python-versions = "*"
 
 [package.dependencies]
 pytest = ">=2.6.0"
+
+[[package]]
+name = "six"
+version = "1.16.0"
+description = "Python 2 and 3 compatibility utilities"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "tomli"
@@ -314,7 +334,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.10"
-content-hash = "9e02b29b6c3d3acf605a4eb2026373fb1128f889009849ba0d59b2ebb32d85b5"
+content-hash = "eb1add6b983fad929fa1c0dcea4a8afb232767b701042a15bb3cd89e0cca273e"
 
 [metadata.files]
 atomicwrites = [
@@ -414,11 +434,19 @@ pyrepl = [
     {file = "pyrepl-0.9.0.tar.gz", hash = "sha256:292570f34b5502e871bbb966d639474f2b57fbfcd3373c2d6a2f3d56e681a775"},
 ]
 pytest = [
-    {file = "pytest-7.1.1-py3-none-any.whl", hash = "sha256:92f723789a8fdd7180b6b06483874feca4c48a5c76968e03bb3e7f806a1869ea"},
-    {file = "pytest-7.1.1.tar.gz", hash = "sha256:841132caef6b1ad17a9afde46dc4f6cfa59a05f9555aae5151f73bdf2820ca63"},
+    {file = "pytest-7.1.2-py3-none-any.whl", hash = "sha256:13d0e3ccfc2b6e26be000cb6568c832ba67ba32e719443bfe725814d3c42433c"},
+    {file = "pytest-7.1.2.tar.gz", hash = "sha256:a06a0425453864a270bc45e71f783330a7428defb4230fb5e6a731fde06ecd45"},
+]
+pytest-assume = [
+    {file = "pytest-assume-2.4.3.tar.gz", hash = "sha256:983e90537660fd7aa18bb554693523020272e7edeee3e40435593297bcc6347e"},
+    {file = "pytest_assume-2.4.3-py3-none-any.whl", hash = "sha256:09074220213b87cf1f400609701a44b75078b4e69588c7227e061ff9b3ecf54b"},
 ]
 pytest-env = [
     {file = "pytest-env-0.6.2.tar.gz", hash = "sha256:7e94956aef7f2764f3c147d216ce066bf6c42948bb9e293169b1b1c880a580c2"},
+]
+six = [
+    {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
+    {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
 tomli = [
     {file = "tomli-1.2.3-py3-none-any.whl", hash = "sha256:e3069e4be3ead9668e21cb9b074cd948f7b3113fd9c8bba083f48247aab8b11c"},

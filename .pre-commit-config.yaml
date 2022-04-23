@@ -10,6 +10,7 @@ repos:
     - id: trailing-whitespace
     - id: check-executables-have-shebangs
     - id: flake8
+    - id: end-of-file-fixer
     - id: debug-statements
     - id: detect-private-key
       exclude: \_spec.rb$
