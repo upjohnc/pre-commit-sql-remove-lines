@@ -25,18 +25,13 @@ def hook_check_file(file_name: str) -> int:
 
     check_endlines = remove_endlines(file_content)
 
-    if file_content == check_endlines:
-        return 1
+    if len(check_endlines.splitlines()) == len(file_content.splitlines()):
+        return 0
 
     with open(file_name, "w") as f:
         f.write(check_endlines)
 
-    return 0
-
-
-# From https://gist.github.com/johnjohndoe/4024222
-# Files (not deleted) in the index
-# files=$(git diff-index --name-status --cached HEAD | grep -v ^D | cut -c3-)
+    return 1
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -47,7 +42,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     return_hook_value = 0
 
     for filename in args.filenames:
+        print(filename)
         return_from_file_fix = hook_check_file(filename)
+        print(return_from_file_fix)
         if return_from_file_fix:
             print(f"Fixing {filename}")
         return_hook_value = return_hook_value | return_from_file_fix

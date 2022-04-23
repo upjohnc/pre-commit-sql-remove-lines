@@ -26,5 +26,4 @@ run-isort:
 run-ci: run-black run-isort run-flake8
 
 run-pytest:
-    PYTHONPATH=src poetry run pytest
-
+    PYTHONPATH=disney_precommit_sql_file poetry run pytest

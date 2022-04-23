@@ -10,7 +10,6 @@ repos:
     - id: trailing-whitespace
     - id: check-executables-have-shebangs
     - id: flake8
-    - id: end-of-file-fixer
     - id: debug-statements
     - id: detect-private-key
       exclude: \_spec.rb$
@@ -30,8 +29,3 @@ repos:
     rev: cdefcb096e520a6daa9552b1d4636f5f1e1729cd
     hooks:
     - id: hadolint
-  - repo: https://github.com/sqlfluff/sqlfluff
-    rev: 0.10.1
-    hooks:
-      - id: sqlfluff-fix
-      - id: sqlfluff-lint
