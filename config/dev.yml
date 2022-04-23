@@ -1,0 +1,6 @@
+cpu: 256
+memory: 512
+environment_variables:
+  ENV_NAME: dev
+  LOG_THRESHOLD: DEBUG
+  DB_SECRET: ue1-dev-di-didb-ro

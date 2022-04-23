@@ -1,0 +1,6 @@
+cpu: 256
+memory: 512
+environment_variables:
+  ENV_NAME: prod
+  LOG_THRESHOLD: INFO
+  DB_SECRET: ue1-prod-di-didb-ro
